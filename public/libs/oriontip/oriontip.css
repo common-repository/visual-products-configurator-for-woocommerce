@@ -1,0 +1,32 @@
+.oriontip {
+	position: absolute;
+	background-color: #333;
+	font-size: 13px;
+	padding: 10px 12px;
+	border-radius: 3px;
+	color: #fff;
+	max-width: 160px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.2);
+	visibility: hidden;
+	z-index: 999;
+}
+
+.oriontip.visible {
+	visibility: visible;
+}
+
+.oriontip:after {
+	content: "";
+	border: 10px solid;
+	border-color: #333 transparent transparent transparent;
+	position: absolute;
+	bottom: -15px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+	.oriontip {
+		max-width: 120px;
+	}
+}
